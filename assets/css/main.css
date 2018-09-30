@@ -1,0 +1,26 @@
+/*==============================
+=            Global            =
+==============================*/
+#signs_options .sign_col img {
+	max-width: 85%;
+	width: 85%;
+}
+#signs_options .btn-repeat {}
+#sign_name .sign_name_inner h2 {
+	font: 400 2.2em 'Lalezar';
+}
+.sign_col {
+	background: #f8f8f8;
+    padding: 1.2em 0;
+    border-radius: 2px;
+    border: 1px solid #f0f0f0;
+}
+.btn-repeat {
+    outline: none!important;
+    width: 10rem;
+    border-radius: 2px;
+    font-size: 14px;
+    padding: .7em 0;
+    box-shadow: 1px 2px 9px #ddd;
+}
+/*=====  End of Global  ======*/

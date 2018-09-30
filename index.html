@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Lalezar" rel="stylesheet">
+	<title>Quiz</title>
+</head>
+<body>
+	
+	<!-- Parent Container -->
+	<div class="container">
+		<!-- Sign Options -->
+		<div id="signs_options" class="mt-5 text-center">
+			<div class="row">
+				<div class="col">
+					<div class="sign_col">
+						<span class="sign_img">
+							<img src="" alt="">
+						</span>
+					</div>
+				</div>
+				<div class="col">
+					<div class="sign_col">
+						<span class="sign_img">
+							<img src="" alt="">
+						</span>
+					</div>
+				</div>
+				<div class="col">
+					<div class="sign_col">
+						<span class="sign_img">
+							<img src="" alt="">
+						</span>
+					</div>
+				</div>
+				<div class="col">
+					<div class="sign_col">
+						<span class="sign_img">
+							<img src="" alt="">
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="sign_name" class="mt-5">
+			<div class="sign_name_inner text-center">
+				<h2>"إختر علامة "ممنوع الوقوف</h2>
+				<button class="btn btn-primary btn-repeat mt-2" onclick="iterate()">REPEAT</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		'use stric';
+
+		const signsArr = [
+			['takes_brings_sign', '1.png'],
+			['danger_falls_sign', '2.jpg'],
+			['glissage_sign', '3.png'],
+			['verage_sign', '4.png'],
+			['planes_nearby_sign', '5.png'],
+			['road_getSmaller_sign', '6.png'],
+			['noHeavierThank25_sign', '7.png'],
+			['dontExceed70_sign', '8.png'],
+			['turnLeft_sign', '9.png'],
+			['interdit_sign', '10.png']
+		]
+
+
+			const iterate = ()=> {
+				// iterate throught All signs array
+				for(let i=0; i<signsArr.length;i++){console.log(signsArr[i])}
+
+				// select All img elements
+				let images = document.querySelectorAll('#signs_options .sign_img img');
+				// get Random Num within signs array
+				// let rand = Math.round(Math.random() * signsArr.length);
+
+				// iterate throught All imgs
+				for(let i=0; i<images.length;i++){
+    				images[i].setAttribute('src', `assets/img/${signsArr[Math.round(Math.random() * signsArr.length)][1]}`);
+    			}
+
+			}
+
+			iterate();
+
+
+
+
+
+	</script>
+
+	<script src="assets/js/main.js"></script>
+</body>
+</html>
